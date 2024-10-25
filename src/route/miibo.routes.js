@@ -1,14 +1,17 @@
 import { Router } from "express"
+import { getProductos, createProductos, updateProductos, deleteProductos, getProductosById } from '../route/controllers/miibo.controllers.js'
 
 const router = Router()
 
-router.get('/login', (req, res) => res.send ('Entrando...'))
+router.get('/login', getProductos)
 
-router.post('/login', (req, res) => res.send ('Iniciando...'))
+router.get('/login/:id', getProductosById)
 
-router.put('/login', (req, res) => res.send ('Cambiando datos'))
+router.post('/login', createProductos)
 
-router.delete('/login', (req, res) => res.send ('Cerrando sesion...'))
+router.put('/login', updateProductos)
+
+router.delete('/login/:id', deleteProductos)
 
 
 export default router

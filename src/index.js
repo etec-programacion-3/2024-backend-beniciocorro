@@ -4,7 +4,9 @@ import indexRoutes from './route/index.routes.js'
 
 const app = express()
 
-app.use(miiboRoutes)
+app.use(express.json())
+
+app.use('/api', miiboRoutes)
 app.use(indexRoutes)
 
 app.listen(3000)
