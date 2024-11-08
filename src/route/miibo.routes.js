@@ -3,15 +3,15 @@ import { getProductos, createProductos, updateProductos, deleteProductos, getPro
 
 const router = Router()
 
-router.get('/login', getProductos)
+router.get('/amiibos', getProductos)
 
-router.get('/login/:id', getProductosById)
+router.get('/amiibos/:id', getProductosById)
 
-router.post('/login', createProductos)
+router.post('/postAmiibo', createProductos)
 
-router.put('/login', updateProductos)
+router.put('/update', updateProductos)
 
-router.delete('/login/:id', deleteProductos)
+router.delete('/borra/:id', deleteProductos)
 
 
 export default router
